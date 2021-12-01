@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<!-- 下拉导航栏 -->
+<ul class="slide_nav">
+    <li>
+        <!-- 导航栏标题 -->
+        <a href="javascript:;">不隐藏的标题</a>
+        <!-- 隐藏部分 -->
+        <ul style="display:none">
+            <!-- 手动添加display=none -->
+            <li><a href="javascript:;">隐藏value1</a></li>
+            <li><a href="javascript:;">隐藏value2</a></li>
+            <li><a href="javascript:;">隐藏value3</a></li>
+            <li><a href="javascript:;">隐藏value4</a></li>
+        </ul>
+    </li>
+</ul>
+<script>
+    $(".slide_nav").on({
+        mouseover: function (e) {
+            $(e.target).parents("li").children("ul").stop().slideDown();
+        },
+        mouseout: function (e) {
+            $(e.target).parents("li").children("ul").stop().slideUp();
+        }
+    })
+</script>
+</html>
